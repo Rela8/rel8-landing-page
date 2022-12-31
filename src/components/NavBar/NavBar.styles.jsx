@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { rel8LightPink, rel8Purple, rel8White } from "../../globals";
+import { rel8Black, rel8LightPink, rel8Purple, rel8White } from "../../globals";
 import { mobile, tablet } from "../../responsive";
 
 export const NavContainer = styled.div`
@@ -23,6 +23,7 @@ export const Logo = styled.img`
 
 
 export const NavMiddle = styled.div`
+    position: relative;
     ${
         mobile({
             display: "none",
@@ -34,10 +35,33 @@ export const NavMiddle = styled.div`
         })
     }
 `
+export const DropDownSlider = styled.div`
+    background-color: ${rel8Purple};
+    z-index: 2;
+    width: 150px;
+    word-wrap: break-word;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 40px;
+    right: ${props=>props.typex==='product' ? "-60px": ""};
+    left: ${props=>props.typex==='product' ? "": "60px"};
+    display: ${props=>props.show==='yes' ? "none":"block"};
+`
+export const DropDownItem = styled.p`
+    margin: 10px 5px;
+    text-align: center;
+    color: ${rel8White};
+    cursor: pointer;
+`
 export const NavMiddleLinks = styled.span`
     margin-left: 30px;
     font-size: 20px;
     cursor: pointer;
+    color: ${rel8Black};
 `
 
 export const Hamburger = styled.div`
@@ -118,7 +142,7 @@ export const BackDrop = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 4;
     background-color: rgba(0, 0, 0, 0.5);
     display: none;
     transition: 0.3s all;

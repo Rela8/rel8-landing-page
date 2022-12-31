@@ -1,3 +1,4 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import PricingAdministrator from "./pages/PricingAdministrator";
 import PricingMembership from "./pages/PricingMembership";
@@ -6,11 +7,15 @@ import ProductsMembership from "./pages/ProductsMembership";
 
 function App() {
   return (
-    // <Home />
-    // <ProductsMembership />
-    // <ProductsAdministrator />
-    <PricingMembership />
-    // <PricingAdministrator />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/products-admin" element={<ProductsAdministrator />}/>
+        <Route path="/products-member" element={<ProductsMembership />}/>
+        <Route path="/pricing-admin" element={<PricingAdministrator />}/>
+        <Route path="/pricing-member" element={<PricingMembership />}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

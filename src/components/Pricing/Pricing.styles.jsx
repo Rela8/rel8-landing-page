@@ -25,6 +25,7 @@ export const PricingHeader = styled.p`
 `
 export const PricingSubHeader = styled.p`
     margin-top: 10px;
+    text-align: center;
 `
 
 export const PricingButtonHolder = styled.div`
