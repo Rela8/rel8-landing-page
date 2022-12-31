@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import NavBar from '../components/NavBar/NavBar'
 import About from '../components/Products/About/About'
 import Features from '../components/Products/Features/Features'
@@ -20,6 +20,9 @@ import ResourceImg from '../assets/Product/Membership/Resourse.png'
 import TicketImg from '../assets/Product/Membership/Ticket.png'
 
 const ProductsMembership = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
         <NavBar />

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from "styled-components";
 import { rel8LightPink } from '../../../globals';
 import { K4, mobile } from '../../../responsive';
@@ -22,19 +23,34 @@ export const FooterHold = styled.p`
 `
 export const FooterLinks = styled.a`
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+`
+export const FooterHeader = styled.div`
+    font-size: 24px;
 `
 
 const Footer = () => {
   return (
     <FooterContainer>
+        <FooterHeader>Products</FooterHeader>
         <FooterHold>
-            <FooterLinks>Product</FooterLinks>
+            <Link style={{textDecoration:"none", color:"black"}} to="/products-member">Product Membership</Link>
         </FooterHold>
         <FooterHold>
-            <FooterLinks>Pricing</FooterLinks>
+            <Link style={{textDecoration:"none", color:"black"}} to="/products-admin">Product Administrator</Link>
+        </FooterHold>
+
+        <FooterHeader>Pricing</FooterHeader>
+        <FooterHold>
+            <Link style={{textDecoration:"none", color:"black"}} to="/pricing-member">Pricing Membership</Link>
         </FooterHold>
         <FooterHold>
-            <FooterLinks>Contact Us</FooterLinks>
+            <Link style={{textDecoration:"none", color:"black"}} to="/pricing-admin">Pricing Administrator</Link>
+        </FooterHold>
+
+        <FooterHold>
+            <FooterLinks href='#'>Contact Us</FooterLinks>
         </FooterHold>
     </FooterContainer>
   )

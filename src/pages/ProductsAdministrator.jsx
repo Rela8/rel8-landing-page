@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AdminChat, AdminEvents, AdminExec, AdminFeatures, AdminResc, AdminEmployee, 
   AdminApp, AdminGallery, AdminAuth, AdminTicket} from '../AdministratorPageData'
 import NavBar from '../components/NavBar/NavBar'
@@ -16,8 +16,12 @@ import GalleryImg from '../assets/Product/Administrator/Gallery.png'
 import EmployeeImg from '../assets/Product/Administrator/Employee.png'
 import ResourceImg from '../assets/Product/Administrator/Resourse.png'
 import TicketImg from '../assets/Product/Administrator/Ticket.png'
+import Footer from '../components/Products/Footer/Footer'
 
 const ProductsAdministrator = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <>
       <NavBar />
@@ -32,6 +36,7 @@ const ProductsAdministrator = () => {
       <GenericLeft data={AdminApp} image={App}/>
       <GenericRight data={AdminAuth} image={AuthImg}/>
       <GenericLeft data={AdminTicket} image={TicketImg}/>
+      <Footer />
     </>
   )
 }
