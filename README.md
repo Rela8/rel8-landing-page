@@ -1,6 +1,14 @@
 # Rel8
 
-# Getting Started with Create React App
+### Important files
+
+1. **AdministratorPageData.js**: Contains the data rendered to the admin package page.
+2. **MembershipPageData.js**: Contains the data thats rendered to the member package page.
+3. **PricingData.js**: Contains the data that's rendered to the pricing section of the site.
+4. **responsive.js**: Cotains the responsive design, containers.
+5. **globals.js**: Contains the color scheme and global components for checked text(basically the texts with a purple check mark).
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

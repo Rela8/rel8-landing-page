@@ -12,6 +12,7 @@ export const BenefitsContainer = styled.div`
         mobile({
             flexDirection: "column",
             padding: "30px 20px 30px 20px",
+            alignItems: "center"
         })
     }
     ${
