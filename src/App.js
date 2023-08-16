@@ -4,7 +4,7 @@ import PricingAdministrator from "./pages/PricingAdministrator";
 import PricingMembership from "./pages/PricingMembership";
 import ProductsAdministrator from "./pages/ProductsAdministrator";
 import ProductsMembership from "./pages/ProductsMembership";
-
+import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +15,10 @@ function App() {
         <Route path="/pricing-admin" element={<PricingAdministrator />}/>
         <Route path="/pricing-member" element={<PricingMembership />}/>
       </Routes>
+
+      <TawkMessengerReact
+                propertyId={process.env.REACT_APP_PUBLIC_PROPERTY_ID}
+                widgetId={process.env.REACT_APP_PUBLIC_WIDTH_ID}/>
     </BrowserRouter>
   );
 }
